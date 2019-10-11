@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.Activity_Fragment">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toob_acivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_20"
+            android:layout_gravity="center"
+            android:text="活动"
+            android:textSize="@dimen/dp_17" />
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:id="@+id/ll_title"
+        android:layout_width="@dimen/dp_345"
+        android:layout_height="@dimen/dp_234"
+        android:layout_below="@+id/toob_acivity"
+
+        android:layout_marginLeft="@dimen/dp_15"
+        android:layout_marginTop="@dimen/dp_24">
+
+        <ImageView
+            android:id="@+id/iv_tu"
+            android:layout_width="@dimen/dp_345"
+            android:layout_height="@dimen/dp_147"
+            android:layout_marginRight="15dp"
+            android:src="@mipmap/banner1" />
+
+        <TextView
+            android:id="@+id/tv_titl"
+            android:layout_width="@dimen/dp_159"
+            android:layout_height="@dimen/dp_19"
+            android:layout_below="@+id/iv_tu"
+            android:layout_marginTop="@dimen/dp_11"
+            android:text="@string/experience" />
+
+        <TextView
+            android:id="@+id/titl1"
+            android:layout_width="@dimen/dp_194"
+            android:layout_height="@dimen/dp_19"
+            android:layout_below="@+id/tv_titl"
+            android:layout_marginTop="@dimen/dp_6"
+            android:text="@string/title1" />
+
+        <TextView
+            android:layout_width="@dimen/dp_164"
+            android:layout_height="@dimen/dp_19"
+            android:layout_below="@+id/titl1"
+            android:layout_marginTop="@dimen/dp_6"
+            android:text="截止时间：2019年8月31日" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="@dimen/dp_345"
+        android:layout_height="@dimen/dp_234"
+        android:layout_below="@+id/ll_title"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:layout_marginTop="@dimen/dp_15"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_tu1"
+            android:layout_width="@dimen/dp_345"
+            android:layout_height="@dimen/dp_147"
+            android:src="@mipmap/banner2" />
+
+        <TextView
+            android:id="@+id/title1"
+            android:layout_width="@dimen/dp_79"
+            android:layout_height="@dimen/dp_19"
+            android:layout_below="@id/iv_tu1"
+            android:layout_marginTop="9dp"
+            android:text="享受新时代" />
+
+        <TextView
+            android:id="@+id/title2"
+            android:layout_width="@dimen/dp_207"
+            android:layout_height="@dimen/dp_19"
+            android:layout_below="@+id/title1"
+            android:layout_marginTop="9dp"
+            android:text="请大家踊跃参与，晒出大家的拿手菜" />
+
+        <TextView
+            android:layout_width="@dimen/dp_164"
+            android:layout_height="@dimen/dp_19"
+            android:layout_below="@+id/title2"
+            android:layout_marginTop="9dp"
+            android:text="截止时间：2019年8月31日" />
+    </RelativeLayout>
+</RelativeLayout>
