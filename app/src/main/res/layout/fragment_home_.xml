@@ -3,12 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragment.Home_Fragment">
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
 
             <RelativeLayout
                 android:id="@+id/rl_home"
@@ -38,14 +40,28 @@
                     android:layout_marginTop="@dimen/dp_14"
                     android:src="@mipmap/logo" />
 
-                <ImageView
-                    android:id="@+id/iv_msg"
-                    android:layout_width="@dimen/dp_16"
-                    android:layout_height="@dimen/dp_15"
+                <RelativeLayout
+                    android:layout_width="@dimen/dp_31"
+                    android:layout_height="match_parent"
                     android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:layout_marginRight="@dimen/dp_30"
-                    android:src="@mipmap/xiaoxi" />
+                    android:layout_marginRight="@dimen/dp_15">
+
+                    <ImageView
+                        android:id="@+id/iv_msg"
+                        android:layout_width="@dimen/dp_16"
+                        android:layout_height="@dimen/dp_15"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/xiaoxi"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+
+                    <com.example.myapplication.NumView
+                        android:id="@+id/msg_num"
+                        android:layout_width="@dimen/dp_19"
+                        android:layout_height="@dimen/dp_19"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginBottom="@dimen/dp_18"/>
+                </RelativeLayout>
             </RelativeLayout>
 
 
@@ -54,108 +70,126 @@
             android:id="@+id/banner"
             android:layout_width="match_parent"
             android:layout_height="@dimen/dp_138"
-            android:layout_below="@id/rl_home"
             android:layout_marginLeft="@dimen/dp_15"
             android:layout_marginTop="@dimen/dp_12"
             android:layout_marginRight="@dimen/dp_15" />
 
         <LinearLayout
             android:id="@+id/ll_iv"
-            android:layout_below="@id/banner"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/dp_48"
             android:layout_marginTop="@dimen/dp_31"
             android:orientation="horizontal"
             android:gravity="center">
+
+            <LinearLayout
+                android:id="@+id/ll_entrance"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:gravity="center_horizontal">
             <ImageView
                 android:layout_width="@dimen/dp_22"
                 android:layout_height="@dimen/dp_22"
-                android:layout_weight="1"
                 android:src="@mipmap/menjinyaoshi"/>
-            <ImageView
-                android:layout_width="@dimen/dp_23"
-                android:layout_height="@dimen/dp_22"
+                <TextView
+                    android:id="@+id/entrance"
+                    android:layout_width="@dimen/dp_44"
+                    android:layout_height="@dimen/dp_12"
+                    android:textSize="@dimen/dp_11"
+                    android:layout_marginTop="@dimen/dp_11"
+                    android:gravity="center"
+                    android:text="@string/entrance" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_managment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:src="@mipmap/lianxiwuy"/>
-            <ImageView
-                android:layout_width="@dimen/dp_23"
-                android:layout_height="@dimen/dp_22"
-                android:layout_weight="1"
-                android:src="@mipmap/jiaofei"/>
-            <ImageView
-
-                android:layout_width="@dimen/dp_23"
-                android:layout_height="@dimen/dp_22"
-                android:layout_weight="1"
-                android:src="@mipmap/baoxiu"/>
-            <ImageView
-                android:layout_width="23dp"
-                android:layout_weight="1"
-                android:layout_height="@dimen/dp_22"
-                android:src="@mipmap/xinzengfangke2x"/>
-
-        </LinearLayout>
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="@dimen/dp_23"
+                    android:layout_height="@dimen/dp_23"
+                    android:src="@mipmap/lianxiwuy"/>
+                <TextView
+                    android:id="@+id/managment"
+                    android:layout_width="@dimen/dp_44"
+                    android:layout_height="@dimen/dp_12"
+                    android:textSize="@dimen/dp_11"
+                    android:layout_marginTop="@dimen/dp_11"
+                    android:gravity="center"
+                    android:text="@string/property" />
+            </LinearLayout>
         <LinearLayout
-            android:id="@+id/ll_text"
-            android:layout_below="@id/ll_iv"
+            android:id="@+id/ll_cost"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/dp_11"
-            android:layout_marginTop="@dimen/dp_12"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/entrance"
-                android:layout_width="@dimen/dp_44"
-                android:layout_height="@dimen/dp_11"
-                android:textSize="@dimen/dp_11"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="@string/entrance" />
-
-            <TextView
-                android:id="@+id/managment"
-                android:layout_width="@dimen/dp_44"
-                android:layout_height="@dimen/dp_11"
-                android:textSize="@dimen/dp_11"
-                android:gravity="center"
-                android:layout_weight="1"
-                android:text="@string/property" />
-
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:gravity="center_horizontal">
+            <ImageView
+                android:layout_width="@dimen/dp_23"
+                android:layout_height="@dimen/dp_19"
+                android:src="@mipmap/jiaofei"/>
             <TextView
                 android:id="@+id/cost"
                 android:layout_width="44dp"
                 android:textSize="@dimen/dp_11"
-                android:layout_height="@dimen/dp_11"
+                android:layout_height="@dimen/dp_12"
                 android:gravity="center"
-                android:layout_weight="1"
+                android:layout_marginTop="@dimen/dp_13"
                 android:text="@string/cost" />
-
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_warranty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:gravity="center_horizontal">
+            <ImageView
+                android:layout_width="@dimen/dp_23"
+                android:layout_height="@dimen/dp_23"
+                android:src="@mipmap/baoxiu"/>
             <TextView
                 android:id="@+id/warranty"
                 android:layout_width="@dimen/dp_42"
-                android:layout_height="@dimen/dp_11"
+                android:layout_height="@dimen/dp_12"
                 android:textSize="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_12"
                 android:gravity="center"
-                android:layout_weight="1"
                 android:text="@string/warranty" />
-
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_visitor"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:gravity="center_horizontal">
+            <ImageView
+                android:layout_width="23dp"
+                android:layout_height="@dimen/dp_22"
+                android:src="@mipmap/xinzengfangke2x"/>
             <TextView
                 android:id="@+id/visitor"
                 android:layout_width="@dimen/dp_44"
-                android:layout_height="@dimen/dp_13"
-                android:textSize="@dimen/dp_10"
+                android:layout_height="@dimen/dp_12"
+                android:textSize="@dimen/dp_11"
+                android:layout_marginTop="@dimen/dp_11"
                 android:gravity="center"
                 android:layout_weight="1"
                 android:text="新增访客" />
         </LinearLayout>
-
+        </LinearLayout>
 
         <LinearLayout
             android:id="@+id/ll_notify"
             android:layout_width="match_parent"
             android:layout_height="@dimen/dp_46"
             android:layout_marginTop="@dimen/dp_13"
-            android:layout_below="@id/ll_text"
             android:orientation="horizontal"
             android:gravity="center_vertical">
 
@@ -174,11 +208,10 @@
                 android:textSize="@dimen/dp_12"/>
         </LinearLayout>
 
-        <include layout="@layout/layout_horizontal_line"/>
+        <include layout="@layout/layout_horizontal_line" />
 
         <LinearLayout
             android:id="@+id/ll_activity"
-            android:layout_below="@id/ll_notify"
             android:layout_marginTop="@dimen/dp_15"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -196,10 +229,11 @@
                 android:id="@+id/rv_activity"
                 android:layout_marginTop="@dimen/dp_5"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false">
 
             </android.support.v7.widget.RecyclerView>
         </LinearLayout>
 
-    </RelativeLayout>
+    </LinearLayout>
 </ScrollView>
