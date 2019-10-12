@@ -23,15 +23,14 @@
         android:layout_width="@dimen/dp_345"
         android:layout_height="@dimen/dp_234"
         android:layout_below="@+id/toob_acivity"
-
         android:layout_marginLeft="@dimen/dp_15"
-        android:layout_marginTop="@dimen/dp_24">
+        android:layout_marginTop="@dimen/dp_24"
+        android:layout_marginRight="@dimen/dp_15">
 
         <ImageView
             android:id="@+id/iv_tu"
             android:layout_width="@dimen/dp_345"
             android:layout_height="@dimen/dp_147"
-            android:layout_marginRight="15dp"
             android:src="@mipmap/banner1" />
 
         <TextView
@@ -40,7 +39,8 @@
             android:layout_height="@dimen/dp_19"
             android:layout_below="@+id/iv_tu"
             android:layout_marginTop="@dimen/dp_11"
-            android:text="@string/experience" />
+            android:text="@string/experience"
+            android:textColor="@color/blackBrown" />
 
         <TextView
             android:id="@+id/titl1"
@@ -78,7 +78,8 @@
             android:layout_height="@dimen/dp_19"
             android:layout_below="@id/iv_tu1"
             android:layout_marginTop="9dp"
-            android:text="享受新时代" />
+            android:text="享受新时代"
+            android:textColor="@color/blackBrown" />
 
         <TextView
             android:id="@+id/title2"
