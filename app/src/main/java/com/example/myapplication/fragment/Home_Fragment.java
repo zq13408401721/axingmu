@@ -1,12 +1,16 @@
 package com.example.myapplication.fragment;
 
 import android.content.Context;
+import android.content.Intent;
+import android.graphics.drawable.BitmapDrawable;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.HorizontalScrollView;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
@@ -17,6 +21,7 @@ import com.bumptech.glide.Glide;
 import com.example.myapplication.R;
 import com.example.myapplication.base.BaseFragment;
 import com.example.myapplication.interfaces.IBasePresenter;
+import com.example.myapplication.view.Entrance_GuardActivity;
 import com.youth.banner.Banner;
 import com.youth.banner.loader.ImageLoader;
 
@@ -26,7 +31,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
-public class Home_Fragment extends BaseFragment {
+public class Home_Fragment extends BaseFragment implements View.OnClickListener {
 
     @BindView(R.id.weather)
     ImageView mWeather;
@@ -36,8 +41,8 @@ public class Home_Fragment extends BaseFragment {
     Banner mBanner;
     @BindView(R.id.ll_iv)
     LinearLayout mLlIv;
-    @BindView(R.id.visible)
-    LinearLayout mVisible;
+    @BindView(R.id.ll_text)
+    LinearLayout llText;
     @BindView(R.id.tongzhi)
     ImageView mTongzhi;
     @BindView(R.id.latest)
@@ -64,8 +69,11 @@ public class Home_Fragment extends BaseFragment {
     TextView mCost;
     @BindView(R.id.warranty)
     TextView mWarranty;
+    @BindView(R.id.visitant)
+    TextView mVisitant;
+    @BindView(R.id.home_relativelayout)
+    RelativeLayout mHomerelativelayout;
     private View view;
-    private Unbinder unbinder;
 
     @Override
     protected IBasePresenter getPresenter() {
@@ -76,7 +84,6 @@ public class Home_Fragment extends BaseFragment {
     @Override
     protected int getLayoutId() {
         return R.layout.fragment_home_;
-
     }
 
     @Override
@@ -90,6 +97,7 @@ public class Home_Fragment extends BaseFragment {
         mBanner.setDelayTime(2000);
         mBanner.isAutoPlay(true);
         mBanner.start();
+
     }
 
     @Override
@@ -101,10 +109,52 @@ public class Home_Fragment extends BaseFragment {
             @Override
             public void onClick(View v) {
                 inflate = getLayoutInflater().inflate(R.layout.popupwindow, null);
-                PopupWindow popupWindow = new PopupWindow(inflate,50,50);
-                popupWindow.showAsDropDown(mBanner);
+                TextView tv_wuye_call = inflate.findViewById(R.id.tv_wuye_call);
+
+                ImageView wuye_pop_dismiss = inflate.findViewById(R.id.wuye_pop_dismiss);
+                tv_wuye_call.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(Intent.ACTION_CALL);
+                        Uri data = Uri.parse("tel:" + 10010);
+                        intent.setData(data);
+                        startActivity(intent);
+                    }
+                });
+
+                final PopupWindow popupWindow = new PopupWindow(inflate, ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+                popupWindow.showAtLocation(mHomerelativelayout, Gravity.CENTER,0,0);
+                wuye_pop_dismiss.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        popupWindow.dismiss();
+                    }
+                });
             }
         });
+        mEntrance.setOnClickListener(this);
+        mCost.setOnClickListener(this);
+        mWarranty.setOnClickListener(this);
+        mVisitant.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.entrance:
+                Intent intent = new Intent(getContext(), Entrance_GuardActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.cost:
+
+                break;
+            case R.id.warranty:
+
+                break;
+            case R.id.visitant:
+
+                break;
+        }
     }
 
     public class imaApp extends ImageLoader {

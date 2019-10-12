@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/beijing"
+    tools:context=".view.Entrance_GuardActivity">
+
+    <ImageView
+        android:id="@+id/iv_entrance_ground_back"
+        android:layout_width="@dimen/dp_9"
+        android:layout_height="@dimen/dp_16"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:layout_marginTop="@dimen/dp_34"
+        android:src="@mipmap/fanhubai"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:layout_width="@dimen/dp_70"
+        android:layout_height="@dimen/dp_19"
+        android:text="扫码开门"
+        android:textColor="#FFFFFF"
+        android:textSize="17sp"
+        android:layout_marginTop="@dimen/dp_34"
+        android:layout_centerHorizontal="true"
+         />
+</RelativeLayout>
