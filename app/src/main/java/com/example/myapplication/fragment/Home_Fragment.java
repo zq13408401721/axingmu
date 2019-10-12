@@ -6,7 +6,6 @@ import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
@@ -36,8 +35,8 @@ public class Home_Fragment extends BaseFragment {
     Banner mBanner;
     @BindView(R.id.ll_iv)
     LinearLayout mLlIv;
-    @BindView(R.id.visible)
-    LinearLayout mVisible;
+    //    @BindView(R.id.visible)
+    //    LinearLayout mVisible;
     @BindView(R.id.tongzhi)
     ImageView mTongzhi;
     @BindView(R.id.latest)
@@ -64,6 +63,9 @@ public class Home_Fragment extends BaseFragment {
     TextView mCost;
     @BindView(R.id.warranty)
     TextView mWarranty;
+    @BindView(R.id.ll_text)
+    LinearLayout llText;
+    Unbinder unbinder1;
     private View view;
     private Unbinder unbinder;
 
@@ -101,11 +103,13 @@ public class Home_Fragment extends BaseFragment {
             @Override
             public void onClick(View v) {
                 inflate = getLayoutInflater().inflate(R.layout.popupwindow, null);
-                PopupWindow popupWindow = new PopupWindow(inflate,50,50);
+                PopupWindow popupWindow = new PopupWindow(inflate, 50, 50);
                 popupWindow.showAsDropDown(mBanner);
             }
         });
     }
+
+
 
     public class imaApp extends ImageLoader {
 
