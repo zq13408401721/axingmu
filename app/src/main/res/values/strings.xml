@@ -38,4 +38,5 @@
     <string name="housemanagement">住户管理</string>
     <string name="bindhouse">绑定房屋</string>
     <string name="attestation">认证后信息不可修改</string>
+    <string name="tvhouse">为了保障社区内的住户享受高品质服务，请提供真实的信息以供物业中心进行验证</string>
 </resources>
