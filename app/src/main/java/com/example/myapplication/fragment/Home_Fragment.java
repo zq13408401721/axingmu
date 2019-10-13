@@ -36,8 +36,8 @@ public class Home_Fragment extends BaseFragment {
     Banner mBanner;
     @BindView(R.id.ll_iv)
     LinearLayout mLlIv;
-    @BindView(R.id.visible)
-    LinearLayout mVisible;
+    /*@BindView(R.id.visible)
+    LinearLayout mVisible;*/
     @BindView(R.id.tongzhi)
     ImageView mTongzhi;
     @BindView(R.id.latest)
