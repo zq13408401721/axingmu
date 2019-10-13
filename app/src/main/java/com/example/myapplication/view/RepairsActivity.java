@@ -67,6 +67,12 @@ public class RepairsActivity extends BaseActivity implements Repairs_Contracy.Vi
         return new RepairsPresenter();
     }
 
+    /**
+     *
+     * @param dictBean
+     * 获取公共数据
+     * 设置tablayout的标题
+     */
     @Override
     public void getDictDataInfo(DictBean dictBean) {
         ArrayList<String> strings = new ArrayList<>();
