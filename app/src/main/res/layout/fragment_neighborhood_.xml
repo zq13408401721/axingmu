@@ -16,12 +16,14 @@
             android:text="@string/neighbor" />
 
         <ImageView
+            android:id="@+id/address_secrecy"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/dp_109"
             android:src="@mipmap/yinshen" />
 
         <ImageView
+            android:id="@+id/address_more"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/dp_15"

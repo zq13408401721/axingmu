@@ -23,6 +23,7 @@
         <activity android:name=".presenter.acivity.Change_acivity" />
         <activity android:name=".presenter.acivity.Start_acivity" />
         <activity android:name=".presenter.acivity.Verification_acivity"></activity>
+        <activity android:name=".fragment.neighbor.ContactsActivity"></activity>
         <activity android:name=".presenter.acivity.Landing_acivity">
 
         </activity>
