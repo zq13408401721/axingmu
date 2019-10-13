@@ -22,6 +22,7 @@ import com.example.myapplication.R;
 import com.example.myapplication.base.BaseFragment;
 import com.example.myapplication.interfaces.IBasePresenter;
 import com.example.myapplication.view.Entrance_GuardActivity;
+import com.example.myapplication.view.RepairsActivity;
 import com.youth.banner.Banner;
 import com.youth.banner.loader.ImageLoader;
 
@@ -149,7 +150,8 @@ public class Home_Fragment extends BaseFragment implements View.OnClickListener 
 
                 break;
             case R.id.warranty:
-
+                Intent intent1 = new Intent(getContext(), RepairsActivity.class);
+                startActivity(intent1);
                 break;
             case R.id.visitant:
 

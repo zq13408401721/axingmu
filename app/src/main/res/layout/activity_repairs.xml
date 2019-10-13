@@ -1,28 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@mipmap/beijing"
-    tools:context=".view.Entrance_GuardActivity">
+    android:orientation="vertical"
+    tools:context=".view.RepairsActivity">
 
     <android.support.v7.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_44">
         <ImageView
-            android:id="@+id/iv_entrance_ground_back"
+            android:id="@+id/repa"
             android:layout_width="@dimen/dp_9"
             android:layout_height="@dimen/dp_16"
-            android:src="@mipmap/fanhubai"/>
+            android:src="@mipmap/fanhuhei"/>
         <TextView
             android:layout_width="@dimen/dp_71"
-            android:layout_height="@dimen/dp_19"
-            android:text="@string/saoma"
-            android:textSize="@dimen/sp_17"
+            android:layout_height="@dimen/dp_18"
+            android:text="@string/baixiu"
             android:gravity="center"
-            android:textColor="@color/white"
             android:layout_gravity="center"/>
     </android.support.v7.widget.Toolbar>
-   
-</RelativeLayout>
+
+</LinearLayout>

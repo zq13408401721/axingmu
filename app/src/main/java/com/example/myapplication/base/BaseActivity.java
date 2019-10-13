@@ -32,11 +32,10 @@ public abstract class BaseActivity<V extends IBaseView, P extends IBasePresenter
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         getWindow().setBackgroundDrawable(null);
         super.onCreate(savedInstanceState);
-
         setContentView(getLayoutId());
         ButterKnife.bind(this);
 
-        if (!SystemUtils.checkNetWork()) {
+       if (!SystemUtils.checkNetWork()) {
             View inflate = LayoutInflater.from(this).inflate(R.layout.not_net, null);
             ViewGroup.LayoutParams params = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
             addContentView(inflate, params);
@@ -45,12 +44,12 @@ public abstract class BaseActivity<V extends IBaseView, P extends IBasePresenter
             if (mPresenter != null) {
                 mPresenter.attchView(this);
             }
-
-            initFragments();
-            initView();
-            initData();
-            initListener();
+           initFragments();
+           initView();
+           initData();
+           initListener();
         }
+
 
 
     }
