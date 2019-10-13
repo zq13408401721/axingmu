@@ -9,4 +9,8 @@
     <color name="colorgenn">#A9E16B</color>
     <color name="black">#000000</color>
     <color name="shop">#00837B</color>
+    <color name="brown">#BB5500</color>
+    <color name="text">#ff00837b</color>
+    <color name="text_un">#ff999999</color>
+    <color name="horizont">#fffafafa</color>
 </resources>
