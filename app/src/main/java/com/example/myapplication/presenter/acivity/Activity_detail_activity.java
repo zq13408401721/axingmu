@@ -46,7 +46,7 @@ public class Activity_detail_activity extends BaseActivity implements View.OnCli
 
     @Override
     protected void initView() {
-
+        //初始化弹窗
         initPopupWindow();
 
 
