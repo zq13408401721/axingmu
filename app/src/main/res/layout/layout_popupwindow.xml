@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cover"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#29000000"
+    android:gravity="center"
+    >
+
+    <RelativeLayout
+        android:layout_width="@dimen/dp_285"
+        android:layout_height="@dimen/dp_220"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/dp_10"
+            android:id="@+id/ll"
+            android:layout_width="@dimen/dp_270"
+            android:layout_height="@dimen/dp_150"
+            android:alpha="1"
+            android:background="@drawable/pop_shape"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_19"
+                android:text="如需发票"
+                android:textColor="#ff333333"
+                android:textSize="16sp"
+                />
+            <TextView
+                android:layout_marginTop="@dimen/dp_8"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_19"
+                android:text="请本年内到物业开据"
+                android:textColor="#ff333333"
+                android:textSize="16sp"
+                />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/wuye_pop_dismiss"
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="@dimen/dp_30"
+            android:layout_alignRight="@id/ll"
+            android:layout_marginRight="-14dp"
+            android:layout_marginBottom="@dimen/dp_200"
+            android:src="@mipmap/tankuang" />
+    </RelativeLayout>
+
+</RelativeLayout>

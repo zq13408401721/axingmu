@@ -1,3 +1,15 @@
 1.activity_propertyfee_home 物业缴费首页
 
 2.layout_propertyfee_home_item 物业缴费首页条目布局
+
+3.activity_propertyfee_detailed 物业缴费条目点击进入详情界面
+
+4.设置一个统一的标题布局进行复用 layout_propertyfee_title_style
+
+5.清单文件添加activity文件
+
+6.定义终端码常量public static String TERMINAL="a01973b3-38a2-4260-8caa-00c4b53e6d86";
+
+7.新增pop_shape title_bg资源文件
+
+8.新增layout_popupwindow.xml

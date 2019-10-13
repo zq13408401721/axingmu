@@ -12,5 +12,6 @@ public class Constant {
     public static final String PATH_CACHE = PATH_DATA + "/ShiXun";
 
     public static String token = "";
+    public static String TERMINAL="a01973b3-38a2-4260-8caa-00c4b53e6d86";
 
 }

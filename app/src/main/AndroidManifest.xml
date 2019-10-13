@@ -23,12 +23,17 @@
         <activity android:name=".presenter.acivity.Change_acivity" />
         <activity android:name=".presenter.acivity.Start_acivity" />
         <activity android:name=".presenter.acivity.Verification_acivity"></activity>
-        <activity android:name=".presenter.acivity.Landing_acivity">
+        <activity android:name=".presenter.propertyfee.PropertyHome_activity">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".presenter.acivity.Landing_acivity">
+
+
         </activity>
         <activity android:name=".MainActivity" />
     </application>
