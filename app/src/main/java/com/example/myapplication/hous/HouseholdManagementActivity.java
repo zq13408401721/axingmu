@@ -12,13 +12,16 @@ import com.example.myapplication.base.BaseActivity;
 import com.example.myapplication.interfaces.IBasePresenter;
 
 import butterknife.BindView;
+
 import butterknife.OnClick;
 
 public class HouseholdManagementActivity extends BaseActivity {
+
+
     @BindView(R.id.iv_back_household)
     ImageView ivBackHousehold;
-    @BindView(R.id.tv_addmanagement_household)
-    TextView tvAddmanagementHousehold;
+    @BindView(R.id.tv_addhousehold)
+    TextView tvAddhousehold;
     @BindView(R.id.tv_name)
     TextView tvName;
     @BindView(R.id.rv_mananagement)
@@ -40,18 +43,21 @@ public class HouseholdManagementActivity extends BaseActivity {
     }
 
 
-
-    @OnClick({R.id.iv_back_household, R.id.tv_addmanagement_household, R.id.rv_mananagement})
+    @OnClick({R.id.iv_back_household, R.id.tv_addhousehold, R.id.tv_name})
     public void onViewClicked(View view) {
         switch (view.getId()) {
-            case R.id.iv_back_household:
+            case R.id.iv_back_household: //返回
                 break;
-            case R.id.tv_addmanagement_household:
-                startActivity(new Intent(HouseholdManagementActivity.this,BIndHouseActivity.class));
+            case R.id.tv_addhousehold:  //添加住户
+                startActivity(new Intent(HouseholdManagementActivity.this, BIndHouseActivity.class));
+
                 break;
-            case R.id.rv_mananagement:
+            case R.id.tv_name:
                 break;
         }
     }
+
+
+
 
 }

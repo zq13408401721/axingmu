@@ -36,7 +36,6 @@
         android:text="@string/addhouse"
         android:textSize="@dimen/sp_14"
         app:layout_constraintRight_toRightOf="parent"
-
         app:layout_constraintTop_toTopOf="parent"/>
 
     <android.support.v7.widget.RecyclerView

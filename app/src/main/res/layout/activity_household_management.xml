@@ -29,7 +29,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tv_addmanagement_household"
+        android:id="@+id/tv_addhousehold"
         android:layout_width="@dimen/dp_57"
         android:layout_height="@dimen/dp_16"
         android:layout_marginTop="@dimen/dp_14"
@@ -41,25 +41,24 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
+
     <TextView
         android:id="@+id/tv_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/dp_17"
         android:layout_marginTop="@dimen/dp_82"
-        android:text="@string/householdname"
-        android:textColor="@color/greyhous"
-        android:textSize="@dimen/sp_16"
-        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-      />
-
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="@dimen/dp_120"
+        android:layout_height="wrap_content"
+        android:text="@string/householdname"
+        android:textColor="#ff999999"
+        android:textSize="@dimen/sp_16"
+        />
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rv_mananagement"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="@dimen/dp_114"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_name" />
+        app:layout_constraintRight_toRightOf="parent"/>
 </android.support.constraint.ConstraintLayout>

@@ -50,7 +50,6 @@ public class MyhousingActivity extends BaseActivity {
             case R.id.tv_addhousing:
                 Intent intent = new Intent(MyhousingActivity.this, HouseholdManagementActivity.class);
                 startActivity(intent);
-
                 break;
         }
     }
