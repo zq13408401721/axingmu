@@ -52,6 +52,9 @@ public class Activity_detail_activity extends BaseActivity implements View.OnCli
 
     }
 
+    /**
+     * 初始化弹窗
+     */
     private void initPopupWindow() {
         View view = LayoutInflater.from(this).inflate(R.layout.popupwindow_activity_detail, null);
         ImageView window_finish_iv = view.findViewById(R.id.window_finish_iv);
@@ -64,10 +67,15 @@ public class Activity_detail_activity extends BaseActivity implements View.OnCli
         popupWindow.setOutsideTouchable(true);
         popupWindow.setFocusable(true);
 
+        //弹窗阴影
         winodwOutShadow(popupWindow);
 
     }
 
+    /**
+     * //弹窗监听关闭后背景透明度
+     * @param popupWindow
+     */
     private void winodwOutShadow(PopupWindow popupWindow) {
 
         popupWindow.setOnDismissListener(new PopupWindow.OnDismissListener() {
@@ -91,7 +99,7 @@ public class Activity_detail_activity extends BaseActivity implements View.OnCli
 
         switch (view.getId()) {
 
-            case R.id.activity_detail_applybtn:
+            case R.id.activity_detail_applybtn://弹窗显示时背景透明度
                 WindowManager.LayoutParams lp = Activity_detail_activity.this.getWindow().getAttributes();
                 lp.alpha = 0.7f;
                 Activity_detail_activity.this.getWindow().setAttributes(lp);
