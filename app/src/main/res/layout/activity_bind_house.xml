@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".hous.BIndHouseActivity">
+
+    <LinearLayout
+        android:id="@+id/lins1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_44"
+        android:layout_marginTop="@dimen/dp_20"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_back_household"
+            android:layout_width="@dimen/dp_9"
+            android:layout_height="@dimen/dp_16"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginTop="@dimen/dp_14"
+            android:src="@mipmap/fanhuhei" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_153"
+            android:layout_marginTop="@dimen/dp_13"
+            android:text="@string/bindhouse"
+            android:textColor="@color/blackmangement"
+            android:textSize="@dimen/sp_17" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_atte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:layout_marginTop="@dimen/dp_29"
+        android:text="@string/attestation"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lins1" />
+
+    <RelativeLayout
+        android:id="@+id/rl_1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_306"
+        android:layout_marginTop="@dimen/dp_15"
+        app:layout_constraintTop_toBottomOf="@id/tv_atte">
+
+        <TextView
+            android:id="@+id/tv_attename"
+            android:layout_width="@dimen/dp_113"
+            android:layout_height="@dimen/dp_18"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_17"
+            android:text="请输入真实姓名"
+            android:textColor="#ff999999"
+            android:textSize="@dimen/sp_16" />
+<TextView
+    android:background="@drawable/selector_txt"
+    android:layout_marginLeft="@dimen/dp_15"
+    android:layout_marginTop="@dimen/dp_53"
+    android:layout_width="@dimen/dp_345"
+    android:layout_height="@dimen/dp_1" />
+        <TextView
+            android:id="@+id/tv_mobile"
+            android:layout_width="@dimen/dp_114"
+            android:layout_height="@dimen/dp_18"
+            android:layout_alignTop="@id/tv_attename"
+            android:layout_alignEnd="@id/tv_attename"
+            android:layout_marginTop="@dimen/dp_38"
+            android:text="请输入手机号码"
+            android:textColor="#ff999999"
+            android:textSize="@dimen/sp_16" />
+        <TextView
+            android:background="@drawable/selector_txt"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginTop="@dimen/dp_90"
+            android:layout_width="@dimen/dp_345"
+            android:layout_height="@dimen/dp_1" />
+        <TextView
+            android:id="@+id/tv_identity"
+            android:layout_width="@dimen/dp_65"
+            android:layout_height="@dimen/dp_18"
+            android:layout_alignTop="@id/tv_mobile"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_38"
+            android:text="身份选择"
+            android:textColor="#ff333333"
+            android:textSize="@dimen/sp_16" />
+        <TextView
+            android:background="@drawable/selector_txt"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginTop="@dimen/dp_125"
+            android:layout_width="@dimen/dp_345"
+            android:layout_height="@dimen/dp_1" />
+        <ImageView
+            android:id="@+id/iv_1"
+            android:layout_width="@dimen/dp_7"
+            android:layout_height="@dimen/dp_11"
+            android:layout_alignTop="@id/tv_mobile"
+            android:layout_alignRight="@id/tv_identity"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/dp_45"
+            android:layout_marginRight="@dimen/dp_15"
+            android:src="@mipmap/fanhuhei" />
+
+        <TextView
+            android:id="@+id/tv_building"
+            android:layout_width="@dimen/dp_65"
+            android:layout_height="@dimen/dp_18"
+            android:layout_alignTop="@id/tv_identity"
+            android:layout_alignEnd="@id/tv_identity"
+            android:layout_marginTop="@dimen/dp_35"
+            android:text="楼宇选择"
+            android:textColor="#ff333333"
+            android:textSize="@dimen/sp_16" />
+        <TextView
+            android:background="@drawable/selector_txt"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginTop="@dimen/dp_160"
+            android:layout_width="@dimen/dp_345"
+            android:layout_height="@dimen/dp_1" />
+        <ImageView
+            android:id="@+id/iv_2"
+            android:layout_width="@dimen/dp_7"
+            android:layout_height="@dimen/dp_11"
+            android:layout_alignTop="@id/iv_1"
+            android:layout_alignRight="@id/tv_identity"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/dp_38"
+            android:layout_marginRight="@dimen/dp_15"
+            android:src="@mipmap/fanhuhei" />
+
+        <TextView
+            android:id="@+id/tv_unit"
+            android:layout_width="@dimen/dp_65"
+            android:layout_height="@dimen/dp_18"
+            android:layout_alignTop="@id/tv_building"
+            android:layout_alignEnd="@id/tv_building"
+            android:layout_marginTop="@dimen/dp_35"
+            android:text="单元选择"
+            android:textColor="#ff333333"
+            android:textSize="@dimen/sp_16" />
+        <ImageView
+            android:id="@+id/iv_3"
+            android:layout_width="@dimen/dp_7"
+            android:layout_height="@dimen/dp_11"
+            android:layout_alignTop="@id/iv_2"
+            android:layout_alignRight="@id/tv_identity"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/dp_31"
+            android:layout_marginRight="@dimen/dp_15"
+            android:src="@mipmap/fanhuhei" />
+
+        <TextView
+            android:layout_width="@dimen/dp_65"
+            android:layout_height="@dimen/dp_18"
+            android:layout_alignTop="@id/tv_unit"
+            android:layout_alignEnd="@id/tv_unit"
+            android:layout_marginTop="@dimen/dp_35"
+            android:text="房间选择"
+            android:textColor="#ff333333"
+            android:textSize="@dimen/sp_16" />
+
+        <ImageView
+            android:id="@+id/iv_4"
+            android:layout_width="@dimen/dp_7"
+            android:layout_height="@dimen/dp_11"
+            android:layout_alignTop="@id/tv_unit"
+            android:layout_alignRight="@id/tv_identity"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/dp_40"
+            android:layout_marginRight="@dimen/dp_15"
+            android:src="@mipmap/fanhuhei" />
+    </RelativeLayout>
+
+    <Button
+       android:layout_marginTop="@dimen/dp_60"
+        android:layout_width="@dimen/dp_311"
+        android:layout_height="@dimen/dp_40"
+        android:gravity="center"
+        android:textSize="@dimen/dp_15"
+        android:text="确认"
+        android:textColor="@color/white"
+        android:background="@drawable/selector_btn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rl_1">
+
+    </Button>
+
+
+</android.support.constraint.ConstraintLayout>

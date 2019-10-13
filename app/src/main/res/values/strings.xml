@@ -29,4 +29,13 @@
     <string name="laifang">来访方式</string>
     <string name="year">年</string>
     <string name="minute">日</string>
+
+
+    <string name="myhouse">我的房屋</string>
+    <string name="addhouse">添加房屋</string>
+    <string name="householdname">15栋二单元2205 </string>
+    <string name="addhouseuser">添加住户</string>
+    <string name="housemanagement">住户管理</string>
+    <string name="bindhouse">绑定房屋</string>
+    <string name="attestation">认证后信息不可修改</string>
 </resources>
