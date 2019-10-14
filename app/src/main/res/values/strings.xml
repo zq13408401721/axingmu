@@ -21,7 +21,7 @@
     <string name="baixiu">报修服务</string>
     <string name="fenlei">分类标签</string>
     <string name="fuwudizhi">服务地址</string>
-    <string name="shijian">上门时间</string>
+    <string name="shijian">上门时间</string>s
     <string name="dianhua">联系电话</string>
     <string name="jingxixiangyunxiaoqu">京西祥云小区业主问卷调查</string>
     <string name="louhao">请输入你的楼号</string>
@@ -29,4 +29,12 @@
     <string name="laifang">来访方式</string>
     <string name="year">年</string>
     <string name="minute">日</string>
+    <string name="activity_detail">活动详情</string>
+    <string name="enjoy">享受新食代</string>
+    <string name="apply">报名</string>
+    <string name="activityapply">活动报名</string>
+    <string name="okapply">确认报名</string>
+    <string name="saoma">扫码开门</string>
+    <string name="neighbor">邻里</string>
+    <string name="commonlyusedthephone">常用电话</string>
 </resources>
