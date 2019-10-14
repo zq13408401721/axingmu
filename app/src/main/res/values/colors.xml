@@ -9,4 +9,15 @@
     <color name="colorgenn">#A9E16B</color>
     <color name="black">#000000</color>
     <color name="shop">#00837B</color>
+    <color name="blackBrown">#4B4B4B</color>
+    <color name="activityDetailLine">#F0F0F0</color>
+    <color name="activityDetailTime">#999999</color>
+    <color name="lineGray">#F9F9F9</color>
+    <color name="trueGreen">#259C98</color>
+    <color name="falseGreen">#00837B</color>
+    <color name="bantouming">#33000000</color>
+    <color name="ff333333">#ff333333</color>
+    <color name="fffafafa">#fffafafa</color>
+    <color name="ff999999">#ff999999</color>
+    <color name="f0f0f0">#F0F0F0</color>
 </resources>
