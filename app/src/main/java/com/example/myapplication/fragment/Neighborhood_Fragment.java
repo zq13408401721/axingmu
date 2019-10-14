@@ -1,18 +1,21 @@
 package com.example.myapplication.fragment;
 
-import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.ImageView;
+import android.widget.PopupWindow;
+import android.widget.RelativeLayout;
 
 import com.example.myapplication.R;
 import com.example.myapplication.adaper.NeighborhoodRec_Adapter;
 import com.example.myapplication.base.BaseFragment;
-import com.example.myapplication.fragment.neighbor.ContactsActivity;
 import com.example.myapplication.interfaces.IBasePresenter;
 
 import java.util.ArrayList;
@@ -22,7 +25,7 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import butterknife.Unbinder;
 
-public class Neighborhood_Fragment extends BaseFragment {
+public class Neighborhood_Fragment extends BaseFragment implements PopupWindow.OnDismissListener {
 
     @BindView(R.id.neighbor_rec)
     RecyclerView neighborRec;
@@ -32,6 +35,10 @@ public class Neighborhood_Fragment extends BaseFragment {
     @BindView(R.id.address_more)
     ImageView addressMore;
     Unbinder unbinder1;
+    @BindView(R.id.neighbor_relativelayout)
+    RelativeLayout neighborRelativelayout;
+    private PopupWindow popupWindow;
+    private WindowManager.LayoutParams lp;
 
 
     @Override
@@ -54,8 +61,17 @@ public class Neighborhood_Fragment extends BaseFragment {
         }
         NeighborhoodRec_Adapter neighborhoodRec_adapter = new NeighborhoodRec_Adapter(strings);
         neighborRec.setAdapter(neighborhoodRec_adapter);
-
-
+        //创建popwindow
+        View layout_address_pop =
+                LayoutInflater.from(getContext()).inflate(R.layout.layout_address_pop, null);
+        popupWindow = new PopupWindow(layout_address_pop, ViewGroup.LayoutParams.WRAP_CONTENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT);
+        // 设置PopupWindow是否能响应外部点击事件
+        popupWindow.setOutsideTouchable(true);
+        // 设置PopupWindow是否能响应点击事件
+        popupWindow.setTouchable(true);
+        lp = getActivity().getWindow().getAttributes();
+        popupWindow.setOnDismissListener(this);
     }
 
     @Override
@@ -75,15 +91,25 @@ public class Neighborhood_Fragment extends BaseFragment {
 
     @OnClick({R.id.address_secrecy, R.id.address_more})
     public void onViewClicked(View view) {
+
         switch (view.getId()) {
             case R.id.address_secrecy:
                 break;
             case R.id.address_more:
-                Intent intent = new Intent(getContext(), ContactsActivity.class);
 
-                startActivity(intent);
+                popupWindow.showAsDropDown(addressMore, -300, 0);
+                if (popupWindow.isShowing()) {
+                    lp.alpha = 0.7f;
 
+                    getActivity().getWindow().setAttributes(lp);
+                }
                 break;
         }
+    }
+
+    @Override
+    public void onDismiss() {
+        lp.alpha = 1f;
+        getActivity().getWindow().setAttributes(lp);
     }
 }
