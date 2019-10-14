@@ -29,11 +29,4 @@
     <string name="laifang">来访方式</string>
     <string name="year">年</string>
     <string name="minute">日</string>
-    <string name="activity_detail">活动详情</string>
-    <string name="enjoy">享受新食代</string>
-    <string name="apply">报名</string>
-    <string name="activityapply">活动报名</string>
-    <string name="okapply">确认报名</string>
-    <string name="saoma">扫码开门</string>
-
 </resources>
