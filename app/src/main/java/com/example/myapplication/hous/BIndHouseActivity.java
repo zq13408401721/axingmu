@@ -27,22 +27,9 @@ public class BIndHouseActivity extends BaseActivity {
     TextView tv1;
     @BindView(R.id.tv_roomse)
     TextView tvRoomse;
+    @BindView(R.id.btn_confirm)
+    TextView btnconfirm;
 
-
-//    @BindView(R.id.iv_back_household)
-//    ImageView ivBackHousehold;
-//    @BindView(R.id.tv_atte)
-//    TextView tvAtte;
-//    @BindView(R.id.tv_attename)
-//    TextView tvAttename;
-//    @BindView(R.id.tv_mobile)
-//    TextView tvMobile;
-//    @BindView(R.id.tv_identity)
-//    TextView tvIdentity;
-//    @BindView(R.id.tv_building)
-//    TextView tvBuilding;
-//    @BindView(R.id.tv_unit)
-//    TextView tvUnit;
 
     @Override
     protected IBasePresenter getPresenter() {
@@ -63,7 +50,8 @@ public class BIndHouseActivity extends BaseActivity {
     @OnClick({R.id.iv_back, R.id.tv_identity, R.id.tv_build, R.id.tv_unit, R.id.tv_roomse})
     public void onViewClicked(View view) {
         switch (view.getId()) {
-            case R.id.iv_back:
+            case R.id.iv_back://返回 住户管理
+                startActivity(new Intent(BIndHouseActivity.this, HouseholdManagementActivity.class));
                 break;
             case R.id.tv_identity:
                 break;
@@ -74,6 +62,9 @@ public class BIndHouseActivity extends BaseActivity {
             case R.id.tv_unit:
                 break;
             case R.id.tv_roomse:
+                break;
+            case R.id.btn_confirm: //确定
+
                 break;
         }
     }

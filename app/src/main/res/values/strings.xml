@@ -47,7 +47,12 @@
     <string name="roomselection">房间选择</string>
     <string name="confirm">确定</string>
     <string name="buildingselection">楼宇选择</string>
-
     <!--楼宇选择-->
     <string name="buildtxt">中粮京西祥云小区</string>
+    <string name="achieves">完成</string>
+    <string name="ahousingestate">中粮京西祥云小区</string>
+    <string name="unitse">15栋二单元2205</string>
+    <string name="identity">请选择身份</string>
+    <string name="enterthename">请输入姓名</string>
+    <string name="mesg">接收呼播信息</string>
 </resources>

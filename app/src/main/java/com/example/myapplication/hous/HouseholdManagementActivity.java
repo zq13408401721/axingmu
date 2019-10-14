@@ -47,6 +47,7 @@ public class HouseholdManagementActivity extends BaseActivity {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.iv_back_household: //返回
+                startActivity(new Intent(HouseholdManagementActivity.this, MyhousingActivity.class));
                 break;
             case R.id.tv_addhousehold:  //添加住户
                 startActivity(new Intent(HouseholdManagementActivity.this, BIndHouseActivity.class));
@@ -56,8 +57,6 @@ public class HouseholdManagementActivity extends BaseActivity {
                 break;
         }
     }
-
-
 
 
 }
