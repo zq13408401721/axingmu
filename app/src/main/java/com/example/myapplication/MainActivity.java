@@ -1,26 +1,19 @@
 package com.example.myapplication;
 
 
-import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.FragmentManager;
-import android.support.v7.widget.Toolbar;
 import android.widget.FrameLayout;
-import android.widget.Toast;
 
 import com.example.myapplication.base.BaseActivity;
-import com.example.myapplication.bean.Logi_bean;
 import com.example.myapplication.fragment.Activity_Fragment;
 import com.example.myapplication.fragment.Home_Fragment;
 import com.example.myapplication.fragment.My_Fragment;
 import com.example.myapplication.fragment.Neighborhood_Fragment;
-import com.example.myapplication.interfaces.contract.Deng_Contracy;
+import com.example.myapplication.interfaces.contract.Deng_Contract;
 import com.example.myapplication.presenter.SearchLan_Presenter;
-import com.example.myapplication.utils.ToastUtil;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
 
 
 public class MainActivity extends BaseActivity {
@@ -33,7 +26,7 @@ public class MainActivity extends BaseActivity {
     private FragmentManager manager;
 
     @Override
-    protected Deng_Contracy.Presenter getPresenter() {
+    protected Deng_Contract.Presenter getPresenter() {
         return new SearchLan_Presenter();
     }
 

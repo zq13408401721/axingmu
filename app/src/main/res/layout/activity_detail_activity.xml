@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/ll_activity"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_44">
+
+        <ImageView
+            android:layout_width="@dimen/dp_9"
+            android:layout_height="@dimen/dp_16"
+            android:src="@mipmap/fanhuhei" />
+
+        <TextView
+            android:layout_width="@dimen/dp_71"
+            android:layout_height="@dimen/dp_18"
+            android:layout_gravity="center"
+            android:text="@string/activity_detail"
+            android:textColor="@color/black" />
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:src="@mipmap/banner2"
+                android:layout_width="@dimen/dp_345"
+                android:layout_height="@dimen/dp_147"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_marginTop="@dimen/dp_10" />
+
+            <TextView
+                android:layout_width="@dimen/dp_84"
+                android:layout_height="@dimen/dp_20"
+                android:layout_marginLeft="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_20"
+                android:text="@string/enjoy"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_16" />
+
+            <View
+                android:layout_width="@dimen/dp_345"
+                android:layout_height="@dimen/dp_1"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_marginTop="@dimen/dp_15"
+                android:background="@color/activityDetailLine" />
+
+            <LinearLayout
+                android:layout_width="@dimen/dp_345"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_marginTop="@dimen/dp_16"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/dp_40"
+                    android:layout_height="@dimen/dp_40"
+                    android:adjustViewBounds="true"
+                    android:src="@mipmap/ic_launcher" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="@dimen/dp_73"
+                        android:layout_height="@dimen/dp_18"
+                        android:text="@string/smart"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp_14" />
+
+                    <TextView
+                        android:layout_width="@dimen/dp_116"
+                        android:layout_height="@dimen/dp_14"
+                        android:layout_marginTop="@dimen/dp_7"
+                        android:text="2019.08.28 15：50"
+                        android:textColor="@color/activityDetailTime"
+                        android:textSize="@dimen/sp_12" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:text="@string/zhiye"
+                android:textColor="@color/black"
+                android:layout_marginLeft="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_14"
+                android:textSize="@dimen/sp_15"
+                android:layout_width="@dimen/dp_344"
+                android:layout_height="@dimen/dp_87" />
+
+            <ImageView
+                android:layout_marginLeft="@dimen/dp_15"
+                android:src="@mipmap/tu2"
+                android:layout_marginTop="@dimen/dp_13"
+                android:layout_width="@dimen/dp_345"
+                android:layout_height="@dimen/dp_147" />
+
+            <TextView
+                android:text="@string/jingxixiangyunxiaoqu"
+                android:layout_marginTop="@dimen/dp_14"
+                android:textSize="@dimen/sp_15"
+                android:textColor="@color/black"
+                android:layout_marginLeft="@dimen/dp_16"
+                android:layout_width="@dimen/dp_344"
+                android:layout_height="@dimen/dp_131" />
+
+            <LinearLayout
+                android:layout_width="@dimen/dp_284"
+                android:layout_height="@dimen/dp_221"
+                android:layout_marginTop="@dimen/dp_31"
+                android:layout_marginLeft="@dimen/dp_16"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="@dimen/dp_284"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:textColor="@color/activityDetailTime"
+                        android:text="@string/enjoy"
+                        android:textSize="@dimen/sp_15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_19" />
+                    <TextView
+                        android:textColor="@color/black"
+                        android:text="@string/enjoy"
+                        android:textSize="@dimen/sp_15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_19" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="@dimen/dp_284"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:textColor="@color/activityDetailTime"
+                        android:text="@string/enjoy"
+                        android:textSize="@dimen/sp_15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_19" />
+                    <TextView
+                        android:textColor="@color/black"
+                        android:text="@string/enjoy"
+                        android:textSize="@dimen/sp_15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_19" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="@dimen/dp_284"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:textColor="@color/black"
+                        android:text="@string/enjoy"
+                        android:textSize="@dimen/sp_15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_19" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_19"
+                        android:text="@string/enjoy"
+                        android:textColor="@color/activityDetailTime"
+                        android:textSize="@dimen/sp_15" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="@dimen/dp_284"
+                    android:layout_height="@dimen/dp_19"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:textColor="@color/activityDetailTime"
+                        android:text="@string/enjoy"
+                        android:textSize="@dimen/sp_15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_19" />
+                    <TextView
+                        android:textColor="@color/black"
+                        android:text="@string/enjoy"
+                        android:textSize="@dimen/sp_15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_19" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="@dimen/dp_284"
+                    android:layout_height="@dimen/dp_19"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:textColor="@color/activityDetailTime"
+                        android:text="@string/enjoy"
+                        android:textSize="@dimen/sp_15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_19" />
+                    <TextView
+                        android:textColor="@color/black"
+                        android:text="@string/enjoy"
+                        android:textSize="@dimen/sp_15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_19" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="@dimen/dp_284"
+                    android:layout_height="@dimen/dp_19"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:textColor="@color/activityDetailTime"
+                        android:text="@string/enjoy"
+                        android:textSize="@dimen/sp_15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_19" />
+                    <TextView
+                        android:textColor="@color/black"
+                        android:text="@string/enjoy"
+                        android:textSize="@dimen/sp_15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_19" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="@dimen/dp_284"
+                    android:layout_height="@dimen/dp_19"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:textColor="@color/activityDetailTime"
+                        android:text="@string/enjoy"
+                        android:textSize="@dimen/sp_15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_19" />
+                    <TextView
+                        android:textColor="@color/black"
+                        android:text="@string/enjoy"
+                        android:textSize="@dimen/sp_15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_19" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_10"
+                android:background="@color/lineGray"/>
+
+            <View
+                android:background="@color/activityDetailLine"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_marginTop="@dimen/dp_15"
+                android:layout_width="@dimen/dp_345"
+                android:layout_height="@dimen/dp_1"/>
+
+            <Button
+                android:id="@+id/activity_detail_applybtn"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_marginBottom="@dimen/dp_30"
+                android:background="@drawable/button_apply_selector"
+                android:layout_marginTop="@dimen/dp_15"
+                android:text="@string/apply"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_15"
+                android:layout_width="311dp"
+                android:layout_height="@dimen/dp_40" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</LinearLayout>

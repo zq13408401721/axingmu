@@ -7,7 +7,7 @@ import com.example.myapplication.interfaces.IBaseView;
 
 import okhttp3.RequestBody;
 
-public interface Deng_Contracy {
+public interface Deng_Contract {
     interface View extends IBaseView {
         void getdata_deng(Logi_bean logi_bean);
     }

@@ -3,14 +3,12 @@ package com.example.myapplication.presenter;
 
 import com.example.myapplication.base.BasePresenter;
 import com.example.myapplication.bean.Logi_bean;
-import com.example.myapplication.interfaces.contract.Deng_Contracy;
+import com.example.myapplication.interfaces.contract.Deng_Contract;
 import com.example.myapplication.utils.CommonSubscriber;
 import com.example.myapplication.utils.HttpUtils;
 import com.example.myapplication.utils.RxUtils;
 
-import okhttp3.RequestBody;
-
-public class SearchLan_Presenter extends BasePresenter<Deng_Contracy.View> implements Deng_Contracy.Presenter {
+public class SearchLan_Presenter extends BasePresenter<Deng_Contract.View> implements Deng_Contract.Presenter {
 
 
     @Override

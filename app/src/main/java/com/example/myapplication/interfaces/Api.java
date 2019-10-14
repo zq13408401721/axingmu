@@ -15,6 +15,7 @@ public interface Api {
     //https://www.wanandroid.com/catalog/index
     @GET("article/list/0/json")
     Flowable<Logi_bean> getdata_search();
+
     //获取公共配置宝典接口
     @FormUrlEncoded
     @POST("dict")

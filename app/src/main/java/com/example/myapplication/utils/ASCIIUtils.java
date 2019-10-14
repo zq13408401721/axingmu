@@ -58,6 +58,7 @@ public class ASCIIUtils {
             result = sb.toString();
             //进行MD5加密
 
+
         } catch (Exception e) {
 
         }
