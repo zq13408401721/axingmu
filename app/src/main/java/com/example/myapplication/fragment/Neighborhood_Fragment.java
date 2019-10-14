@@ -1,14 +1,16 @@
 package com.example.myapplication.fragment;
 
-import android.graphics.Color;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.Gravity;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
@@ -16,6 +18,7 @@ import android.widget.RelativeLayout;
 import com.example.myapplication.R;
 import com.example.myapplication.adaper.NeighborhoodRec_Adapter;
 import com.example.myapplication.base.BaseFragment;
+import com.example.myapplication.fragment.neighbor.ContactsActivity;
 import com.example.myapplication.interfaces.IBasePresenter;
 
 import java.util.ArrayList;
@@ -25,18 +28,20 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import butterknife.Unbinder;
 
-public class Neighborhood_Fragment extends BaseFragment implements PopupWindow.OnDismissListener {
+public class Neighborhood_Fragment extends BaseFragment implements PopupWindow.OnDismissListener,
+        CompoundButton.OnCheckedChangeListener {
 
     @BindView(R.id.neighbor_rec)
     RecyclerView neighborRec;
     Unbinder unbinder;
     @BindView(R.id.address_secrecy)
-    ImageView addressSecrecy;
+    CheckBox addressSecrecy;
     @BindView(R.id.address_more)
     ImageView addressMore;
     Unbinder unbinder1;
     @BindView(R.id.neighbor_relativelayout)
     RelativeLayout neighborRelativelayout;
+
     private PopupWindow popupWindow;
     private WindowManager.LayoutParams lp;
 
@@ -72,6 +77,7 @@ public class Neighborhood_Fragment extends BaseFragment implements PopupWindow.O
         popupWindow.setTouchable(true);
         lp = getActivity().getWindow().getAttributes();
         popupWindow.setOnDismissListener(this);
+        addressSecrecy.setOnCheckedChangeListener(this);
     }
 
     @Override
@@ -89,12 +95,17 @@ public class Neighborhood_Fragment extends BaseFragment implements PopupWindow.O
         unbinder1.unbind();
     }
 
-    @OnClick({R.id.address_secrecy, R.id.address_more})
+    @OnClick({R.id.address_secrecy, R.id.address_more, R.id.neighbor_ll})
     public void onViewClicked(View view) {
 
         switch (view.getId()) {
-            case R.id.address_secrecy:
+            case R.id.neighbor_ll:
+                Intent intent = new Intent(getContext(), ContactsActivity.class);
+                startActivity(intent);
+
+
                 break;
+
             case R.id.address_more:
 
                 popupWindow.showAsDropDown(addressMore, -300, 0);
@@ -111,5 +122,17 @@ public class Neighborhood_Fragment extends BaseFragment implements PopupWindow.O
     public void onDismiss() {
         lp.alpha = 1f;
         getActivity().getWindow().setAttributes(lp);
+    }
+
+    @Override
+    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+        if (isChecked) {
+
+            neighborRelativelayout.setAlpha(0.3f);
+
+        } else {
+            neighborRelativelayout.setAlpha(1f);
+
+        }
     }
 }
